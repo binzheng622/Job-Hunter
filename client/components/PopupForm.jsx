@@ -5,7 +5,6 @@ import Modal from 'react-bootstrap/Modal';
 
 const PopupForm = () => {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -26,7 +25,7 @@ const PopupForm = () => {
       link: link,
     };
 
-    fetch('/', {
+    fetch('/data', {
       method: 'POST',
       body: JSON.stringify(formObj),
       headers: { 'Content-Type': 'application/json' },
@@ -63,10 +62,11 @@ const PopupForm = () => {
             className='formInput'
             onSubmit={(e) => {
               e.preventDefault();
+              setdateApplied('');
               setCompany('');
               setJobTitle('');
-              setSalary('');
               setStatus('');
+              setSalary('');
               setLink('');
             }}
           >

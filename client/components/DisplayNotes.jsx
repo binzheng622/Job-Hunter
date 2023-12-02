@@ -4,7 +4,7 @@ import { useDrop } from 'react-dnd';
 import Post from './Post.jsx';
 
 const DisplayNotes = ({ status }) => {
-  const data = useSelector((state) => state.notes[status]);
+  const jobArray = useSelector((state) => state.notes[status]);
 
   const [{ isOver }, drop] = useDrop(() => ({
     accept: 'post',
@@ -32,7 +32,7 @@ const DisplayNotes = ({ status }) => {
   };
 
   const postArray = [];
-  data.forEach((ele) => {
+  jobArray.forEach((ele) => {
     postArray.push(
       <Post
         key={ele._id}
@@ -46,6 +46,7 @@ const DisplayNotes = ({ status }) => {
       />
     );
   });
+
   return (
     <div className='statusColumn' ref={drop}>
       <label id='status'>{status}</label>

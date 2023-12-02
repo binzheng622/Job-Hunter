@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
-
-const MONGO_URI = process.env.MONGO_URI;
 
 mongoose
-  .connect(MONGO_URI, {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -17,8 +14,8 @@ const jobSchema = new Schema({
   dateApplied: { type: Date, required: true },
   company: { type: String, required: true },
   title: { type: String, required: true },
-  salary: String,
   status: { type: String, required: true },
+  salary: String,
   link: String,
 });
 

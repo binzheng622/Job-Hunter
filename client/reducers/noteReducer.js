@@ -36,4 +36,5 @@ const noteSlice = createSlice({
 });
 
 export const { syncData } = noteSlice.actions;
+
 export default noteSlice.reducer;

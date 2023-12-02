@@ -15,6 +15,7 @@ const JobContainer = () => {
   statusArray.forEach((ele) => {
     columnArray.push(<DisplayNotes key={ele} status={ele} />);
   });
+
   return <div className='jobContainer'>{columnArray}</div>;
 };
 
