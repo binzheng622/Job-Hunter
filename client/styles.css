@@ -12,9 +12,13 @@
 .formButton {
   height: 3em;
   width: 3em;
-  border-radius: 2em;
-  background-color: blue;
-  border: none;
+  border-radius: 1.2em !important;
+  background-color: blue !important;
+  border: none !important;
+}
+
+.formButton:hover {
+  transform: scale(1.2);
 }
 
 .formInput {
