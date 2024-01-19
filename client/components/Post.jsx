@@ -20,7 +20,7 @@ const Post = ({ id, dateApplied, company, title, status, salary, link }) => {
   }));
 
   function handleClick() {
-    fetch(`/${id}`, {
+    fetch(`/api/${id}`, {
       method: 'DELETE',
     })
       .then((response) => response.json())

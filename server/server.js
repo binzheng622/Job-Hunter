@@ -9,7 +9,7 @@ const jobRouter = require('./routers/jobRouter');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/', jobRouter);
+app.use('/api', jobRouter);
 
 //wrong page error 404
 app.use((req, res) => res.status(404).send('Page Not Found'));

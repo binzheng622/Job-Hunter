@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
@@ -25,7 +24,7 @@ const PopupForm = () => {
       link: link,
     };
 
-    fetch('/data', {
+    fetch('/api/data', {
       method: 'POST',
       body: JSON.stringify(formObj),
       headers: { 'Content-Type': 'application/json' },

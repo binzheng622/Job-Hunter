@@ -34,7 +34,7 @@ module.exports = {
     //use to load react components
     new HtmlWebpackPlugin({
       title: 'Development',
-      template: './index.html',
+      template: './client/index.html',
     }),
   ],
   devServer: {
@@ -45,7 +45,7 @@ module.exports = {
     },
     //send all request to backend
     proxy: {
-      '/': 'http://localhost:3000',
+      '/api': 'http://localhost:3000',
     },
   },
 };

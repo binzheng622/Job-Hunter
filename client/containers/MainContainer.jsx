@@ -8,7 +8,7 @@ const MainContainer = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch('/data')
+    fetch('/api/data')
       .then((response) => response.json())
       .then((data) => {
         dispatch(syncData(data));
