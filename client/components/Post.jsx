@@ -44,7 +44,7 @@ const Post = ({ id, dateApplied, company, title, status, salary, link }) => {
         X
       </button>
       <p>
-        <b>Date Applied: </b>
+        <b>Date: </b>
         {dateApplied.substring(0, 10)}
       </p>
       <p>
@@ -52,7 +52,7 @@ const Post = ({ id, dateApplied, company, title, status, salary, link }) => {
         {company}
       </p>
       <p>
-        <b>Job Title: </b>
+        <b>Title: </b>
         {title}
       </p>
       <p>
@@ -64,7 +64,7 @@ const Post = ({ id, dateApplied, company, title, status, salary, link }) => {
         {salary}
       </p>
       <p>
-        <b>Job Link: </b>
+        <b>Link: </b>
         <a href={`http://${link}`}>Click on Link</a>
       </p>
     </div>

@@ -112,7 +112,7 @@ const PopupForm = () => {
               {' '}
               Status:
               <select
-                id='status'
+                id='statusInput'
                 value={status}
                 onChange={(e) => {
                   setStatus(e.target.value);
