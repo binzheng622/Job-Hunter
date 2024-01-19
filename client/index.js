@@ -6,7 +6,6 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import App from './App.jsx';
 import store from './store';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from './styles.css';
 
 const root = createRoot(document.getElementById('root'));
 root.render(

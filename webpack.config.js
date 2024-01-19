@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -35,6 +36,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Development',
       template: './client/index.html',
+    }),
+    new CopyPlugin({
+      patterns: [{ from: './client/styles.css' }],
     }),
   ],
   devServer: {

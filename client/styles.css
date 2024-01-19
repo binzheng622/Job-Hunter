@@ -33,7 +33,7 @@ select {
   display: grid;
   padding: 3.75em 4em 3.75em 3.75em;
   grid-template-columns: repeat(6, 1fr);
-  background-image: url(./assets/whiteboard.png);
+  background-image: url('./assets/whiteboard.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
