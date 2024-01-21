@@ -2,7 +2,7 @@ const { Job } = require('../models/jobModel');
 
 const jobController = {};
 
-//create job app
+//create job app in database
 jobController.createJob = async (req, res, next) => {
   const { dateApplied, company, title, status, salary, link } = req.body;
   try {
@@ -33,7 +33,7 @@ jobController.createJob = async (req, res, next) => {
   }
 };
 
-//update status of job app
+//update status of job app in database
 jobController.updateStatus = async (req, res, next) => {
   const jobId = req.params.id;
   const { status } = req.body;
@@ -58,7 +58,7 @@ jobController.updateStatus = async (req, res, next) => {
   }
 };
 
-//delete the job app
+//delete job app from database
 jobController.deleteJob = async (req, res, next) => {
   const jobId = req.params.id;
   try {
@@ -74,7 +74,7 @@ jobController.deleteJob = async (req, res, next) => {
   }
 };
 
-//update redux store
+//update redux store with current data
 jobController.syncData = async (req, res, next) => {
   try {
     const allInterested = await Job.find({ status: 'Interested' });

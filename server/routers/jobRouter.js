@@ -9,17 +9,17 @@ router.get('/data', jobController.syncData, (req, res) => {
   return res.status(200).json(res.locals.syncData);
 });
 
-//Creating job in database
+//Create job in database
 router.post('/data', jobController.createJob, (req, res) => {
   return res.sendStatus(200);
 });
 
-//Updating job in database
+//Update job in database
 router.patch('/:id', jobController.updateStatus, (req, res) => {
   return res.sendStatus(200);
 });
 
-//Deleting job in database
+//Delete job in database
 router.delete('/:id', jobController.deleteJob, (req, res) => {
   return res.sendStatus(200);
 });

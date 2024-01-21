@@ -7,6 +7,7 @@ import { syncData } from '../reducers/noteReducer.js';
 const MainContainer = () => {
   const dispatch = useDispatch();
 
+  //fetch lastest date from database
   useEffect(() => {
     fetch('/api/data')
       .then((response) => response.json())

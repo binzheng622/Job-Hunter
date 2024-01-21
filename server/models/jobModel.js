@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//connect to MongoDB database
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
@@ -10,6 +11,7 @@ mongoose
 
 const Schema = mongoose.Schema;
 
+//Job Schema for MongoDB
 const jobSchema = new Schema({
   dateApplied: { type: Date, required: true },
   company: { type: String, required: true },

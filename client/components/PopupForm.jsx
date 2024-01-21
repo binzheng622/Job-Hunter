@@ -24,6 +24,7 @@ const PopupForm = () => {
       link: link,
     };
 
+    //create job app in database
     fetch('/api/data', {
       method: 'POST',
       body: JSON.stringify(formObj),

@@ -11,6 +11,7 @@ const Post = ({ id, dateApplied, company, title, status, salary, link }) => {
     Rejected: 'lightsalmon',
   };
 
+  //make posts draggable
   const [{ isDragging }, drag] = useDrag(() => ({
     type: 'post',
     item: { id: id },
@@ -19,6 +20,7 @@ const Post = ({ id, dateApplied, company, title, status, salary, link }) => {
     }),
   }));
 
+  //delete job app from database
   function handleClick() {
     fetch(`/api/${id}`, {
       method: 'DELETE',

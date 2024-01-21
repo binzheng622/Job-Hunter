@@ -6,6 +6,7 @@ import Post from './Post.jsx';
 const DisplayNotes = ({ status }) => {
   const jobArray = useSelector((state) => state.notes[status]);
 
+  //make columns droppable
   const [{ isOver }, drop] = useDrop(() => ({
     accept: 'post',
     drop: (item) => changeStatus(item.id),
@@ -14,6 +15,7 @@ const DisplayNotes = ({ status }) => {
     }),
   }));
 
+  //update status of job app
   const changeStatus = (id) => {
     fetch(`/api/${id}`, {
       method: 'PATCH',
@@ -31,6 +33,7 @@ const DisplayNotes = ({ status }) => {
     location.reload();
   };
 
+  //create posts in each column
   const postArray = [];
   jobArray.forEach((ele) => {
     postArray.push(

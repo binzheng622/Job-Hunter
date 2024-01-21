@@ -29,6 +29,7 @@ module.exports = {
         test: /\.css/,
         use: ['style-loader', 'css-loader'],
       },
+      //use for image files
       {
         test: /\.(png|jpe?g|gif)$/i,
         loader: 'file-loader',
@@ -41,6 +42,7 @@ module.exports = {
       title: 'Development',
       template: './client/index.html',
     }),
+    //seperate css file durring bundle
     new CopyPlugin({
       patterns: [{ from: './client/styles.css' }],
     }),

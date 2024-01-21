@@ -13,6 +13,7 @@ const noteSlice = createSlice({
   name: 'note',
   initialState,
   reducers: {
+    //sync data from database for each status
     syncData: (state, action) => {
       state.Interested = state.Interested.slice();
       state.Interested = action.payload.Interested;

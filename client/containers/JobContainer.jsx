@@ -12,6 +12,7 @@ const JobContainer = () => {
     'Rejected',
   ];
 
+  //create the job status columns
   let columnArray = [];
   statusArray.forEach((ele) => {
     columnArray.push(<DisplayNotes key={ele} status={ele} />);
