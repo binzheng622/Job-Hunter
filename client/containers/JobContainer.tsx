@@ -1,9 +1,9 @@
 import React from 'react';
 import WhiteBoard from '../assets/whiteboard.png';
-import DisplayNotes from '../components/DisplayNotes.jsx';
+import DisplayNotes from '../components/DisplayNotes';
 
 const JobContainer = () => {
-  const statusArray = [
+  const statusArray: string[] = [
     'Interested',
     'Applied',
     'Interviewed',
@@ -13,7 +13,7 @@ const JobContainer = () => {
   ];
 
   //create the job status columns
-  let columnArray = [];
+  let columnArray: JSX.Element[] = [];
   statusArray.forEach((ele) => {
     columnArray.push(<DisplayNotes key={ele} status={ele} />);
   });

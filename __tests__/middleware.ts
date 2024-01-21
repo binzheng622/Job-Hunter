@@ -1,13 +1,13 @@
-const controller = require('../server/controllers/jobController.js');
+import controller from '../server/controllers/jobController.js';
 
 jest.setTimeout(60000); // 60 sec before timeout
 
 describe('Middleware Tests', () => {
-  const req = {
+  const req: any = {
     body: {},
     params: { id: '65ad40865ae1cf3660707b5a' },
   };
-  const res = { locals: {} };
+  const res: any = { locals: {} };
   const next = jest.fn(); // Jest mock function
 
   describe('jobController middleware', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import PopupForm from '../components/PopupForm.jsx';
+import PopupForm from '../components/PopupForm';
 
 const HeaderContainer = () => {
   return (

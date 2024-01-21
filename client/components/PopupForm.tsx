@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { jobAppType } from '../../types';
 
 const PopupForm = () => {
   const [show, setShow] = useState(false);
@@ -15,7 +16,7 @@ const PopupForm = () => {
   const [link, setLink] = useState('');
 
   function handleClick() {
-    let formObj = {
+    let formObj: jobAppType = {
       dateApplied: dateApplied,
       company: company,
       title: jobTitle,

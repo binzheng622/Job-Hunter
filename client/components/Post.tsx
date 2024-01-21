@@ -1,8 +1,16 @@
 import React from 'react';
 import { useDrag } from 'react-dnd';
 
-const Post = ({ id, dateApplied, company, title, status, salary, link }) => {
-  let colorArray = {
+const Post = ({
+  id,
+  dateApplied,
+  company,
+  title,
+  status,
+  salary,
+  link,
+}: any) => {
+  let colorArray: any = {
     Interested: 'yellow',
     Applied: 'lightpink',
     Interviewed: 'lightblue',

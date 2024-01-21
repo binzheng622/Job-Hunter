@@ -1,11 +1,9 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+import 'dotenv/config';
 
 //connect to MongoDB database
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URI)
   .then(() => console.log('Connected to Mongo DB.'))
   .catch((err) => console.log(err));
 
@@ -23,4 +21,4 @@ const jobSchema = new Schema({
 
 const Job = mongoose.model('job', jobSchema);
 
-module.exports = { Job };
+export { Job };

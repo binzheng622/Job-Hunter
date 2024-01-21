@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { syncDataType } from '../../types';
 
-const initialState = {
+const initialState: syncDataType = {
   Interested: [],
   Applied: [],
   Interviewed: [],

@@ -1,22 +1,25 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useDrop } from 'react-dnd';
-import Post from './Post.jsx';
+import Post from './Post';
+import { jobAppType } from '../../types';
 
-const DisplayNotes = ({ status }) => {
-  const jobArray = useSelector((state) => state.notes[status]);
+const DisplayNotes = ({ status }: { status: string }) => {
+  const jobArray: jobAppType[] = useSelector(
+    (state: any) => state.notes[status]
+  );
 
   //make columns droppable
   const [{ isOver }, drop] = useDrop(() => ({
     accept: 'post',
-    drop: (item) => changeStatus(item.id),
+    drop: (item: { id: string }) => changeStatus(item.id),
     collect: (montior) => ({
       isOver: !!montior.isOver(),
     }),
   }));
 
   //update status of job app
-  const changeStatus = (id) => {
+  const changeStatus = (id: string) => {
     fetch(`/api/${id}`, {
       method: 'PATCH',
       body: JSON.stringify({ status }),
@@ -34,8 +37,8 @@ const DisplayNotes = ({ status }) => {
   };
 
   //create posts in each column
-  const postArray = [];
-  jobArray.forEach((ele) => {
+  const postArray: JSX.Element[] = [];
+  jobArray.forEach((ele: any) => {
     postArray.push(
       <Post
         key={ele._id}
